@@ -1,4 +1,35 @@
-.game-container{
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    border: 1px solid orange;
+    display: flex;  
+}
+
+.grid-container{
+    border: 1px solid cyan;
     margin: 0 auto;
+    width: 50%;
+    margin-left: 0;
+    margin-right: 2%;
+}
+
+.default-grid-child{
     border: 1px solid purple;
+}
+
+#form-btn-container{
+    border: 1px solid brown;
+    width: 25%;
+    height: 25%;
+}
+
+#form-div{
+    border: 1px solid blue;
+}
+
+#button-div{
+    border: 1px solid green;
 }
