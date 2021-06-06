@@ -10,14 +10,44 @@
     <div class = "grid-container" id ="grid-cont">
   
     </div>
-    <!---------------------------------------------------->
-    <div id = "form-container">
-        <form id = "form" action="">
-            <div class="form-section" id ="form-section-1"></div>
-            <div class="form-section" id ="form-section-2"></div>
-            <div class="form-section" id ="form-section-3"></div>
-        </form>
+
+    <div id = "main-container">
+        <div id = "button-container">
+            <button class="button-group" id="rainbow">Rainbow</button>
+            <button class="button-group" id="clear">RESET!</button>
+        </div>
+           
+
+        <h3 id ="form-title">Custom Grid</h3>
+ 
+        <div id = "form-button-container">
+            <!---------------------------------------------------->    
+            <div id = "form-container">
+                <form id = "form" action="">
+                  
+                    <div class="form-section" id ="form-section-dimensions">
+                        <label class = "form-label" id = "form-label-1" for="dimensions">Rows/Cols</label>
+                        <input class = "form-input" id ="dimensions" type="text">
+                    </div>
+                    <div class="form-section" id ="form-section-colour">
+                        <label class = "form-label" id = "form-label-2" for="colour">Colour</label>
+                        <input class = "form-input" id ="colour" type="color">
+                    </div>
+                    <div class="form-section" id ="form-section-create">
+                        <button class = "form-button" id="create-grid-button">Create</button>
+                    </div>
+                </form>
+            </div>
+            <!---------------------------------------------------->
+        </div>
+
     </div>
+ <!---------------------------------------------------->  
+   
+
+    
+
+
 
    
    

@@ -4,7 +4,6 @@
 }
 
 body{
-    border: 1px solid orange;
     max-width: 950px;
     min-width: 500px;
     height: 60%;
@@ -12,14 +11,18 @@ body{
     display: flex;  
 }
 
+#main-container{
+    margin: 0 5%;
+}
+
 .grid-container{
-    border: 1px solid cyan;
     display: grid;
     gap: 0px;
     margin: 0 auto;
     width: 50%;
     height: 100%;
     margin: 0;
+    border: 1px solid black;
 }
 
 .grid-child{
@@ -28,15 +31,90 @@ body{
     padding: 0;
 }
 
+h3{
+    height: 10%;
+    margin-bottom: 0;
+    padding-top: 5%;
+}
 
+#form-button-container{
+    height: 50%;
+    margin: 0 auto;
 
+}
+
+#button-container{
+    width: 57%;
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    border: none;
+    border-radius: 3px;
+}
+
+#clear{
+    width: 45%;
+    background-color: black;
+    color: #c8c9cf;
+}
+
+#rainbow{
+    width: 45%;
+    background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%); 
+}
+
+#create-grid-button{
+    background-color: rgba(101, 126, 252, 0.4);
+}
 /*form*/
 
+#form-container{
+    height: 40%;
+    height: 50%;
+}
 
+form{
+    display: flex;
+    flex-wrap: wrap;  
+    margin-right: 40%;
+}
 
+.form-section{
+    margin: 3% 0;
+}
 
+#form-section-dimensions,#form-section-colour{
+    width: 40%;
+}
+
+#dimensions,#colour{
+    width: 40%;
+  
+}
+
+#form-section-create{
+    width: 80%;
+    margin: .5% 0 .5% 0; 
+   
+}
+
+#create-grid-button{
+    width: 70%
+}
+
+.form-label{
+    display: block;
+    margin-bottom: .5%;
+    font-size: .8em;
+}
 
 
 
 /*end*/
 
+
+button:hover, input:hover{
+    box-shadow: 0 0 0 1px rgba(101, 126, 252, 0.4);
+}
