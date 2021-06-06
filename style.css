@@ -5,31 +5,38 @@
 
 body{
     border: 1px solid orange;
+    max-width: 950px;
+    min-width: 500px;
+    height: 60%;
+    margin: 5% auto;
     display: flex;  
 }
 
 .grid-container{
     border: 1px solid cyan;
+    display: grid;
+    gap: 0px;
     margin: 0 auto;
     width: 50%;
-    margin-left: 0;
-    margin-right: 2%;
+    height: 100%;
+    margin: 0;
 }
 
-.default-grid-child{
-    border: 1px solid purple;
+.grid-child{
+    border: 1px solid #000;
+    margin: 0;
+    padding: 0;
 }
 
-#form-btn-container{
-    border: 1px solid brown;
-    width: 25%;
-    height: 25%;
-}
 
-#form-div{
-    border: 1px solid blue;
-}
 
-#button-div{
-    border: 1px solid green;
-}
+/*form*/
+
+
+
+
+
+
+
+/*end*/
+
