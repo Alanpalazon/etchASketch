@@ -44,9 +44,9 @@ h3{
 }
 
 #button-container{
-    width: 57%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
 }
 
 button{
@@ -54,14 +54,16 @@ button{
     border-radius: 3px;
 }
 
+#clear, #rainbow, #white{
+    width: 30%;
+}
+
 #clear{
-    width: 45%;
     background-color: black;
     color: #c8c9cf;
 }
 
 #rainbow{
-    width: 45%;
     background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%); 
 }
 
