@@ -1,35 +1,45 @@
-//global vars
-const gridCont = document.getElementById("grid-cont");
-let gridCells = 100;
+const gridCont = document.getElementById('grid-cont');
+const gridChild = gridCont.childNodes;
 
-//on page load 
+//Problem: this function means cols/rows have fixed widths/heights that won't change 
+//when user creates a c custom grid - FIX!
+function createGrid(gridRows, gridCols){
+    gridCont.style.gridTemplateColumns = `repeat(${ gridCols}, 1fr)`;
+    gridCont.style.gridTemplateRows = `repeat(${ gridRows}, 1fr)`;
+    for(let i = 0; i < (gridRows * gridCols); i++){
+        const gridKid = document.createElement('div');
+        gridKid.classList.add('grid-child');
+        gridKid.setAttribute("id", i);
+        gridCont.appendChild(gridKid);        
+        } 
+}
 
-    //grid 
-gridCont.style.gridTemplateColumns = `repeat(${ Math.sqrt(gridCells)}, 1fr)`;
-gridCont.style.gridTemplateRows = `repeat(${ Math.sqrt(gridCells)}, 1fr)`;
-for(let i = 0; i < gridCells; i++){
-    const gridKid = document.createElement('div');
-    gridKid.classList.add('grid-child');
-    gridKid.setAttribute("id", i);
-    gridCont.appendChild(gridKid);        
-    } 
-    //colour
-gridCont.childNodes.forEach(child => child.addEventListener('mouseover', function(){
-        child.style.backgroundColor = "black"}));
+createGrid(11, 11);
 
-//when rainbow clicked
-document.getElementById('rainbow').addEventListener('click', function(){
-    gridCont.childNodes.forEach(child => child.addEventListener('mouseover', function(){
-        child.style.backgroundColor = 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';}));
-});
 
-//when eraser clicked
-document.getElementById('white').addEventListener('click', function(){
-    gridCont.childNodes.forEach(child => child.addEventListener('mouseover', function(){
-        child.style.backgroundColor = 'White';}));
-});
+function buttonClicks(e){
+    if(e.target.id == "rainbow"){
+            gridChild.forEach(child => child.addEventListener('mouseover', function(){
+            child.style.backgroundColor = 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';}));
+            return;
+    }else if(e.target.id == 'white'){
+            gridChild.forEach(child => child.addEventListener('mouseover', function(){
+            child.style.backgroundColor = 'white';}));
+            return;
+    }
+}
 
-//when reset clicked
+
+
+document.getElementById('rainbow').addEventListener('click', buttonClicks);
+document.getElementById('white').addEventListener('click', buttonClicks);
 document.getElementById('clear').addEventListener('click', function(){
-    gridCont.children.style.backgroundColor == "white";
+    gridChild.forEach(child => child.style.backgroundColor == "white");
+    for(let i = gridChild.length; i > 100; i--){
+        console.log(i);
+        gridCont.removeChild(gridChild[i-1]);
+    }
+
 });
+
+
