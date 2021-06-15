@@ -12,7 +12,7 @@ function createGrid(gridRows, gridCols){
         } 
 }
 
-createGrid(20, 20);
+window.addEventListener('onload', createGrid(10, 10));
 
 function gridColourChange(){
     for(let j = 0; j < gridChild.length; j++){
@@ -20,12 +20,14 @@ function gridColourChange(){
     }
 }
 
-// createmouseover colour change functiuion 
-
 function mouseOverColour(colourParam){
     gridChild.forEach(child => child.addEventListener('mouseover', function(){
         child.style.backgroundColor = colourParam;}));
 }
+
+document.getElementById('colour').addEventListener('change', function(e){
+    mouseOverColour(e.target.value);
+});
 
 function buttonClicks(e){
     if(e.target.id == "rainbow"){
@@ -41,18 +43,20 @@ function buttonClicks(e){
         gridCont.style.gridTemplateColumns = `repeat(10, 1fr)`;
         gridCont.style.gridTemplateRows = `repeat(10, 1fr)`;
         gridColourChange();        
-    }       
+    }
 }
-
-
 
 
 document.getElementById('rainbow').addEventListener('click', buttonClicks);
 document.getElementById('white').addEventListener('click', buttonClicks);
 document.getElementById('clear').addEventListener('click', buttonClicks);
-//create button 
-    // use number input for grid/cols 
-    //move colour inout to button group 
-         // use colour input as mouseOverColour()
+// document.getElementById('create-grid-button').addEventListener('click', function(){ // not working properly. Only removes onload for a second 
+//     window.removeEventListener('onload', createGrid);
+//     const rowsCols = document.getElementById('dimensions').value;
+//     createGrid(rowsCols,rowsCols);
+// });
+//onload event to create standard 10 x 10
+//clock event on custom-grid nutton to remove onload and create custom grid  
+
 
 

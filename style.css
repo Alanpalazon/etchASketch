@@ -63,6 +63,15 @@ button{
     color: #c8c9cf;
 }
 
+#colour-div{
+    margin-top: 5%;
+}
+
+#colour-label{
+    display: block;
+    margin: 1%;
+}
+
 #rainbow{
     background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%); 
 }
@@ -87,12 +96,12 @@ form{
     margin: 3% 0;
 }
 
-#form-section-dimensions,#form-section-colour{
+#form-section-dimensions{
     width: 40%;
 }
 
-#dimensions,#colour{
-    width: 40%;
+#dimensions{
+    width: 135%;
   
 }
 
