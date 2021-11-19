@@ -26,6 +26,8 @@ body{
     display: grid;
     gap: 0px;
     margin: 0 auto;
+    min-height: 300px;
+    min-width: 300px;
     width: 50%;
     height: 100%;
     margin: 0;
