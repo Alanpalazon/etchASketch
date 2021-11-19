@@ -51,6 +51,7 @@ body{
     display: flex;
     justify-content:space-between;
     margin: 0 auto;
+    min-height: auto;
 }
 
 button{
